@@ -495,6 +495,8 @@
 
 .imgbox_container {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
 }
@@ -571,10 +573,7 @@
   }
 
   .imgbox_container {
-    display: block;
     width: 100%;
-    gap: 0.5rem;
-    justify-content: space-evenly;
   }
 
   .imgbox {

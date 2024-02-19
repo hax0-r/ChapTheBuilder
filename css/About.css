@@ -456,11 +456,12 @@ body {
   text-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px;
 }
 
-.section1 {
+.section1About {
   margin: 5rem auto;
   padding: 3vw 10vw;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   display: flex;
   gap: 8%;
   width: 100%;
@@ -984,6 +985,12 @@ footer .section1 button:hover {
   color: #fab012;
 }
 
+@media (max-width: 1024px)  {
+  .section1{
+    margin: 0 auto;
+  }
+}
+
 footer .section2 {
   text-decoration: none;
   background: black;
@@ -1005,6 +1012,7 @@ footer .section2 .left h5 {
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: capitalize;
+  text-align: left;
 }
 
 footer .section2 .left p {
@@ -1012,6 +1020,7 @@ footer .section2 .left p {
   font-family: "Noto Sans", Sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  text-align: left;
   line-height: 26px;
 }
 
@@ -1020,6 +1029,7 @@ footer .section2 .mid {
 }
 
 footer .section2 .mid p {
+  text-align: left;
   color: #FFFFFF;
   font-family: "Noto Sans", Sans-serif;
   font-size: 1.5rem;
@@ -1029,6 +1039,7 @@ footer .section2 .mid p {
 footer .section2 .mid ul {
   list-style: none;
   padding-left: 0;
+  text-align: left;
 }
 
 footer .section2 .mid ul li {
@@ -1040,12 +1051,14 @@ footer .section2 .mid ul li a {
   color: white;
   transition: 200ms all;
 }
+
 footer .section2 .mid ul li a:hover {
   color: #FAB012;
 }
 
 footer .section2 .right p {
   color: #FFFFFF;
+  text-align: left;
   font-family: "Noto Sans", Sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
@@ -1054,6 +1067,7 @@ footer .section2 .right p {
 footer .section2 .right ul {
   list-style: none;
   padding-left: 0;
+  text-align: left;
 }
 
 footer .section2 .right ul li {
@@ -1077,6 +1091,7 @@ footer .section3 {
   font-family: "Open Sans", Sans-serif;
   font-size: 1rem;
   line-height: 1.5em;
+  margin: unset;
   font-weight: 500;
 }
 
@@ -1124,9 +1139,11 @@ footer .section3 p {
   footer .section2 .mid {
     padding-bottom: 1.5rem;
   }
-  footer .section2 .right  {
+
+  footer .section2 .right {
     padding-bottom: 1.5rem;
   }
+
   footer .section2 {
     padding-bottom: unset;
   }
