@@ -23,16 +23,91 @@ body {
   background-size: contain;
 }
 
-.mainnav {
+/* The overlay effect with black background */
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
   position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+/* The content */
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+/* Close button */
+.overlay .closebtn {
+  position: absolute;
+  top: 0;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: black;
+}
+
+.overlay .closebtn:hover {
+  color: #333333;
+}
+
+/* Style the search field */
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+
+.search {
+  display: none;
+  position: absolute;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.mainnav {
+  /* position: fixed; */
   width: 100%;
   background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem !important;
+  padding: 0 !important;
   padding-bottom: 0 !important;
-
   z-index: 10;
 }
 
@@ -122,8 +197,9 @@ body {
 }
 
 .mainnav .left .logo {
-  margin: 0.75rem;
-  width: 10vw;
+  /* margin: 0.75rem; */
+  padding: 10px;
+  width: 190px;
 }
 
 .mainnav .left .logo img {
@@ -135,6 +211,11 @@ body {
   align-items: center;
 }
 
+
+#navColor {
+  color: #FAB012;
+}
+
 .mainnav .left ul a {
   text-decoration: none;
   color: black;
@@ -143,6 +224,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
+  transition: 200ms all;
 }
 
 .mainnav .left ul a:hover {
@@ -152,8 +234,9 @@ body {
 .mainnav .right {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   width: 30%;
+  padding-right: 3rem;
 }
 
 .mainnav .right i {
@@ -161,9 +244,20 @@ body {
   padding-right: 20px;
   font-weight: 900;
   font-size: 18px;
+  transition: 200ms all;
+}
+
+.mainnav .right i:hover {
+  transform: rotate(10deg);
+  color: #FAB012;
 }
 
 .mainnav .right button {
+  background-color: white;
+  border: none;
+}
+
+.mainnav .right .phoneno {
   color: white;
   font-family: "Noto Sans", sans-serif;
   font-size: 1rem;
@@ -173,14 +267,21 @@ body {
   background: #fab012;
   padding: 12px 24px;
   border-radius: 4px;
+  transition: 200ms all;
 }
 
-.mainnav .right button i {
+.mainnav .right .phoneno:hover {
+  background: #fab012b8;
+}
+
+.mainnav .right .phoneno i {
+  transition: 200ms all;
   padding-right: 4px;
   font-size: 18px;
   color: white;
   font-size: auto;
 }
+
 
 .drop {
   padding: 0 !important;
@@ -190,18 +291,13 @@ body {
   display: none;
 }
 
-@media (min-width: 1440px) {
-  .mainnav .left .logo {
-    width: 11vw;
-  }
-}
 
 
 @media (max-width: 1024px) {
 
   .mainnav {
 
-
+    /* position: fixed; */
     display: block;
     padding: 0 !important;
     height: auto;
@@ -220,10 +316,6 @@ body {
     display: none;
   }
 
-  .mainnav .left .logo {
-    width: 16%;
-    min-width: 150px;
-  }
 
   .mainnav {
     display: block;
@@ -262,12 +354,12 @@ body {
 
   .res_menu ul li {
 
-    border-bottom: 1px solid #FAB012;
+    border-bottom: 2px solid #FAB012;
     color: white;
     font-family: "Noto Sans", Sans-serif;
     font-size: 1rem;
     font-weight: 600;
-    padding: 0.60rem 1rem;
+    padding: 1rem;
   }
 
   .res_dropdownbtn {
@@ -282,6 +374,9 @@ body {
   .res_menu ul a {
     text-decoration: none;
     color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .05rem;
   }
 
   .res_dropdown {
@@ -306,32 +401,35 @@ body {
 
     font-size: 0.75rem;
     font-weight: 700;
-    padding-left: 0.75rem !important;
+    padding-left: 1.3rem !important;
   }
 
   .res_dropdown button {
     border: none;
     background-color: black !important;
     color: white;
+    font-size: 1rem;
+    font-weight: 600;
   }
 
   .res_dropdown .menubtn {
     padding: 0.25rem 0.75rem !important;
     color: #FAB012;
     background-color: white !important;
-    border: 1px solid #FAB012;
+    border: 2px solid #FAB012;
     border-radius: 4px;
   }
-
-
-
 }
+
+
+/* =====================navbar End================== */
+/* =====================navbar End================== */
+/* =====================navbar End================== */
 
 
 
 
 .hero {
-  padding-top: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -464,12 +562,13 @@ body {
   }
 
 }
+
 @media (max-width: 500px) {
-  
+
 
   .section1_left p {
-    text-align:justify;
-    padding:  0 1.5rem 1.5rem 1.5rem;
+    text-align: justify;
+    padding: 0 1.5rem 1.5rem 1.5rem;
 
   }
 
@@ -615,6 +714,7 @@ body {
     width: 100%;
   }
 }
+
 @media (max-width: 500px) {
 
   .section2_top h2 {
@@ -622,9 +722,9 @@ body {
   }
 
   .section2_top p {
-    text-align:justify;
-    padding-left:1.5rem;
-    padding-right:1.5rem;
+    text-align: justify;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     padding-bottom: 3rem;
   }
 
@@ -805,10 +905,11 @@ body {
 
 @media (max-width: 500px) {
 
-  .section3 .content_top h2{
+  .section3 .content_top h2 {
     padding-bottom: 1rem;
   }
-  .section3 .content_top p{
+
+  .section3 .content_top p {
     text-align: center;
     font-size: 1rem;
     letter-spacing: .01rem;
@@ -828,12 +929,11 @@ body {
 
 
 
-
 footer {
   width: 100%;
 }
 
-footer .ftsection1 {
+footer .section1 {
   height: 165px;
   display: flex;
   align-items: center;
@@ -843,18 +943,29 @@ footer .ftsection1 {
   background-position: center;
 }
 
-footer .ftsection1 h4 {
+footer .section1 .contact {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+footer .section1 h4 {
+  font-family: "Noto Sans", sans-serif;
   color: #fab012;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-footer .ftsection1 h4 div {
+footer .section1 h4 div {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  margin-left: 10px;
   color: white;
 }
 
-footer .ftsection1 button {
+footer .section1 button {
   color: white;
   font-family: "Noto Sans", sans-serif;
   font-size: 1rem;
@@ -862,24 +973,33 @@ footer .ftsection1 button {
   line-height: 18px;
   border: none;
   background: #fab012;
-  padding: 12px 24px;
-  border-radius: 4px;
+  padding: 15px 35px;
+  border-radius: 3px;
+  border: 2px solid #FAB012;
+  transition: 200ms all;
 }
 
-footer .ftsection2 {
+footer .section1 button:hover {
+  background-color: transparent;
+  color: #fab012;
+}
+
+footer .section2 {
   text-decoration: none;
   background: black;
   width: 100%;
   color: white;
   padding: 70px 30px;
+  display: flex;
+  justify-content: center;
   margin: 0 0;
 }
 
-footer .ftsection2 .left {
+footer .section2 .left {
   padding-right: 7%;
 }
 
-footer .ftsection2 .left h5 {
+footer .section2 .left h5 {
   color: #FAB012;
   font-family: "Noto Sans", Sans-serif;
   font-size: 2.5rem;
@@ -887,7 +1007,7 @@ footer .ftsection2 .left h5 {
   text-transform: capitalize;
 }
 
-footer .ftsection2 .left p {
+footer .section2 .left p {
   color: #DEDEDE;
   font-family: "Noto Sans", Sans-serif;
   font-size: 1rem;
@@ -895,58 +1015,62 @@ footer .ftsection2 .left p {
   line-height: 26px;
 }
 
-footer .ftsection2 .mid {
+footer .section2 .mid {
   padding-right: 2%;
 }
 
-footer .ftsection2 .mid p {
+footer .section2 .mid p {
   color: #FFFFFF;
   font-family: "Noto Sans", Sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-footer .ftsection2 .mid ul {
+footer .section2 .mid ul {
   list-style: none;
   padding-left: 0;
 }
 
-footer .ftsection2 .mid ul li {
+footer .section2 .mid ul li {
   padding: 4px 0;
 }
 
-footer .ftsection2 .mid ul li a {
+footer .section2 .mid ul li a {
   text-decoration: none;
   color: white;
+  transition: 200ms all;
+}
+footer .section2 .mid ul li a:hover {
+  color: #FAB012;
 }
 
-footer .ftsection2 .right p {
+footer .section2 .right p {
   color: #FFFFFF;
   font-family: "Noto Sans", Sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-footer .ftsection2 .right ul {
+footer .section2 .right ul {
   list-style: none;
   padding-left: 0;
 }
 
-footer .ftsection2 .right ul li {
+footer .section2 .right ul li {
   padding: 4px 0;
 }
 
-footer .ftsection2 .right ul li a {
+footer .section2 .right ul li a {
   text-decoration: none;
   color: white;
   padding: 10px 0;
 }
 
-footer .ftsection2 .right ul li a i {
+footer .section2 .right ul li a i {
   padding-right: 10px;
 }
 
-footer .ftsection3 {
+footer .section3 {
   padding: 20px;
   text-align: center;
   color: #000000;
@@ -957,24 +1081,53 @@ footer .ftsection3 {
 }
 
 
+footer .section3 p {
+  margin-bottom: 0;
+}
+
+
 @media (max-width: 1024px) {
-  footer .ftsection1 {
+  footer .section1 .contact {
     text-align: center;
     display: block;
   }
 
-  footer .ftsection1 h4 {
-    font-size: 28px;
-
+  footer .section1 {
+    text-align: center;
+    flex-direction: column;
   }
 
-  footer .ftsection2 .left h5 {
+  footer .section1 h4 {
+    font-size: 25px;
+  }
+
+  footer .section1 h4 div {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  footer .section2 .left h5 {
     font-size: 1.5rem;
   }
 
-  footer .ftsection2 .left p {
+  footer .section2 .left p {
 
     font-size: 16px;
+    max-width: 30rem;
+    width: 100%;
+    padding-bottom: 1.5rem;
 
+  }
+}
+
+@media (max-width: 600px) {
+  footer .section2 .mid {
+    padding-bottom: 1.5rem;
+  }
+  footer .section2 .right  {
+    padding-bottom: 1.5rem;
+  }
+  footer .section2 {
+    padding-bottom: unset;
   }
 }
