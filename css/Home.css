@@ -478,7 +478,6 @@ body {
 
 .carousel-caption {
   text-align: center;
-
   top: 70%;
   transform: translateY(-70%);
   bottom: 0;
@@ -540,8 +539,7 @@ body {
 @media (max-width:1449px) {
   .carousel-caption {
     text-align: center;
-
-    top: 60%;
+    top: 50%;
     transform: translateY(-60%);
     bottom: 0;
     left: 0;
@@ -601,6 +599,15 @@ body {
   .carousel-caption h2 {
     font-size: 1.5rem;
     line-height: auto;
+  }
+
+  .carousel-inner .carousel-item img {
+    height: 70vh;
+  }
+
+  .carousel-caption {
+    text-align: center;
+    top: 55%;
   }
 }
 
@@ -1188,6 +1195,7 @@ footer .section2 .mid ul li a {
   color: white;
   transition: 200ms all;
 }
+
 footer .section2 .mid ul li a:hover {
   color: #FAB012;
 }
@@ -1272,9 +1280,11 @@ footer .section3 p {
   footer .section2 .mid {
     padding-bottom: 1.5rem;
   }
-  footer .section2 .right  {
+
+  footer .section2 .right {
     padding-bottom: 1.5rem;
   }
+
   footer .section2 {
     padding-bottom: unset;
   }
