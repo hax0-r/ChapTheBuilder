@@ -592,19 +592,22 @@ body {
   }
 
   .section1_right .img1 {
-    height: 100%;
+    height: 42%;
     object-fit: cover;
   }
 
   .section1_right .img2 {
 
-    left: -1rem;
-    bottom: -1rem;
-    width: 65%;
-    max-width: 190px;
-    height: 40%;
+    display: none;
   }
 
+  .section1_right {
+    height: unset;
+  }
+
+  .section1About {
+    margin:4rem auto 1.4rem auto;
+  }
 }
 
 
@@ -613,7 +616,7 @@ body {
 
 .section2 {
   margin: 4rem auto;
-  padding: 5vw 10vw;
+  padding: 4vw 10vw;
   text-align: center;
 }
 
@@ -985,8 +988,8 @@ footer .section1 button:hover {
   color: #fab012;
 }
 
-@media (max-width: 1024px)  {
-  .section1{
+@media (max-width: 1024px) {
+  .section1 {
     margin: 0 auto;
   }
 }

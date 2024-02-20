@@ -476,6 +476,7 @@
 
   text-align: center;
   padding: 10px;
+  padding-bottom: 0;
   width: 45%;
 }
 
@@ -546,6 +547,7 @@
     width: 95%;
   }
 
+
 }
 
 
@@ -597,7 +599,7 @@
   }
 
   .carousel-container {
-  margin: 0 auto;    
+    margin: 0 auto;
   }
 }
 
@@ -715,6 +717,7 @@ footer .section2 .mid ul li a {
   color: white;
   transition: 200ms all;
 }
+
 footer .section2 .mid ul li a:hover {
   color: #FAB012;
 }
@@ -799,9 +802,11 @@ footer .section3 p {
   footer .section2 .mid {
     padding-bottom: 1.5rem;
   }
-  footer .section2 .right  {
+
+  footer .section2 .right {
     padding-bottom: 1.5rem;
   }
+
   footer .section2 {
     padding-bottom: unset;
   }

@@ -549,6 +549,7 @@
 
 }
 
+
 @media (max-width: 1024px) {
 
   .Newsroom_head h4 {
@@ -594,6 +595,10 @@
 
   .imgbox {
     margin-bottom: 2.5rem;
+  }
+
+  .Newsroom_head p {
+    padding-bottom: 1rem;
   }
 }
 
@@ -717,6 +722,7 @@ footer .section2 .mid ul li a {
   color: white;
   transition: 200ms all;
 }
+
 footer .section2 .mid ul li a:hover {
   color: #FAB012;
 }
@@ -801,9 +807,11 @@ footer .section3 p {
   footer .section2 .mid {
     padding-bottom: 1.5rem;
   }
-  footer .section2 .right  {
+
+  footer .section2 .right {
     padding-bottom: 1.5rem;
   }
+
   footer .section2 {
     padding-bottom: unset;
   }

@@ -10,7 +10,7 @@
   outline: none;
 }
 
-body{
+body {
   background-color: #f6f6f6 !important;
 }
 
@@ -480,20 +480,23 @@ body{
   line-height: 21px;
   color: rgb(101, 101, 101);
   text-align: center;
+  padding: 0 1rem;
   word-spacing: 0px;
 }
 
 .allprojects {
-  padding: 0 10vw 5rem 10vw;
+  padding: 0 0px 5rem 0px;
   background-color: #f6f6f6;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
 
 .project {
-  width: 30%;
-  height: 80vh;
+  width: 410px;
+  margin: 1rem;
+  height: 600px;
   position: relative;
 }
 
@@ -528,39 +531,36 @@ body{
   word-spacing: 0px;
 }
 
-@media (min-width: 1224px) {
-
-
-}
+@media (min-width: 1224px) {}
 
 
 
 @media (max-width: 1024px) {
-  .text{
+  .text {
     padding: 2rem 1rem;
   }
 
   .text h2 {
     font-size: 32px;
   }
-  
+
   .text p {
     font-size: .9rem;
   }
 
 
-  .allprojects {
+  /* .allprojects {
     flex-direction: column;
     align-items: center;
     padding: 0 2vw;
-  }
+  } */
 
-  .project {
+  /* .project {
     margin: 1rem 0;
     width: 100%;
     height: 60vh;
     position: relative;
-  }
+  } */
 
 
 }
@@ -570,6 +570,14 @@ body{
   .hero h1 {
     font-size: 2rem;
 
+  }
+}
+
+@media (max-width: 500px) {
+
+  .project {
+    width: 310px;
+    height: 400px;
   }
 }
 
@@ -687,6 +695,7 @@ footer .section2 .mid ul li a {
   color: white;
   transition: 200ms all;
 }
+
 footer .section2 .mid ul li a:hover {
   color: #FAB012;
 }
@@ -771,9 +780,11 @@ footer .section3 p {
   footer .section2 .mid {
     padding-bottom: 1.5rem;
   }
-  footer .section2 .right  {
+
+  footer .section2 .right {
     padding-bottom: 1.5rem;
   }
+
   footer .section2 {
     padding-bottom: unset;
   }

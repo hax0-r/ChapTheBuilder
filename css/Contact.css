@@ -769,7 +769,7 @@ footer .section3 p {
   footer .section1 .contact {
     text-align: center;
     display: block;
-
+    padding: 0 0;
   }
 
   footer .section1 {

@@ -988,6 +988,7 @@ background-color: #FAB012; */
 
   .Newsroom_head {
 
+    padding-bottom: 1rem;
     width: 100%;
     margin-bottom: 10px;
   }
@@ -1049,7 +1050,7 @@ background-color: #FAB012; */
   }
 
   .Newsroom_head {
-    margin-bottom: 45px;
+    margin-bottom: 15px;
   }
 
 }
