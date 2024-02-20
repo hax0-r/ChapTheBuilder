@@ -434,7 +434,7 @@ body {
 
 .carousel-inner .carousel-item img {
   opacity: 0.5;
-  height: 600px;
+  height: 60vh;
   -o-object-fit: cover;
   object-fit: cover;
 }
